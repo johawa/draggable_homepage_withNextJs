@@ -1,0 +1,28 @@
+{
+  "name": "JohannesWalenta",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start -p $PORT",
+    "heroku-postbuild": "next build"
+  },
+  "keywords": [],
+  "author": "Johannes Walenta",
+  "license": "ISC",
+  "dependencies": {
+    "@zeit/next-css": "^1.0.1",
+    "next": "^7.0.0",
+    "next-images": "^1.0.0",
+    "react": "^16.5.2",
+    "react-device-detect": "^1.6.1",
+    "react-dnd": "^5.0.0",
+    "react-dnd-html5-backend": "^5.0.1",
+    "react-dom": "^16.5.2",
+    "react-live-clock": "^2.0.3",
+    "react-transition-group": "^2.5.0",
+    "react-typist": "^2.0.4"
+  }
+}

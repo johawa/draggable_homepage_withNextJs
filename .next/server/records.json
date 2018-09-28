@@ -1,0 +1,81 @@
+{
+  "modules": {
+    "byIdentifier": {
+      "external \"react\"": 0,
+      "external \"react-dnd\"": 1,
+      "external \"next/document\"": 2,
+      "external \"react-typist\"": 3,
+      "external \"react-dnd-html5-backend\"": 4,
+      "external \"@babel/runtime/regenerator\"": 5,
+      "external \"next/link\"": 6,
+      "external \"react-transition-group\"": 7,
+      "node_modules/url-loader/dist/cjs.js??ref--6-0!static/DoubleLine.png": 8,
+      "node_modules/url-loader/dist/cjs.js??ref--6-0!static/portfolio.svg": 9,
+      "node_modules/url-loader/dist/cjs.js??ref--6-0!static/spotify.svg": 10,
+      "node_modules/url-loader/dist/cjs.js??ref--6-0!static/watercolor.svg": 11,
+      "external \"react-live-clock\"": 12,
+      "multi ./pages/_document.js": 13,
+      "node_modules/next/dist/build/webpack/loaders/next-babel-loader.js??ref--4!pages/_document.js": 14,
+      "multi ./pages/_error.js": 15,
+      "node_modules/next/dist/build/webpack/loaders/next-babel-loader.js??ref--4!pages/_error.js": 16,
+      "multi ./pages/index.js": 17,
+      "node_modules/ignore-loader/index.js!css/App.css": 18,
+      "node_modules/ignore-loader/index.js!css/Layout.css": 19,
+      "node_modules/ignore-loader/index.js!css/AppOpenCloseAnimation.css": 20,
+      "node_modules/ignore-loader/index.js!css/AppFrame.css": 21,
+      "node_modules/ignore-loader/index.js!css/Background.css": 22,
+      "node_modules/ignore-loader/index.js!css/Navbar.css": 23,
+      "node_modules/ignore-loader/index.js!css/IntroAnimation.css": 24,
+      "multi node_modules/next/dist/pages/_app.js": 25,
+      "node_modules/next/dist/pages/_app.js": 26,
+      "external \"next/app\"": 27,
+      "node_modules/next/dist/build/webpack/loaders/next-babel-loader.js??ref--4!pages/index.js e498befbc0358ad5baa6ef4fc96ea39f": 28
+    },
+    "usedIds": {
+      "0": 0,
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5,
+      "6": 6,
+      "7": 7,
+      "8": 8,
+      "9": 9,
+      "10": 10,
+      "11": 11,
+      "12": 12,
+      "13": 13,
+      "14": 14,
+      "15": 15,
+      "16": 16,
+      "17": 17,
+      "18": 18,
+      "19": 19,
+      "20": 20,
+      "21": 21,
+      "22": 22,
+      "23": 23,
+      "24": 24,
+      "25": 25,
+      "26": 26,
+      "27": 27,
+      "28": 28
+    }
+  },
+  "chunks": {
+    "byName": {
+      "static\\ClMpkHLzLMLLW2mibQXhK\\pages\\_document.js": 0,
+      "static\\ClMpkHLzLMLLW2mibQXhK\\pages\\_error.js": 1,
+      "static\\ClMpkHLzLMLLW2mibQXhK\\pages\\index.js": 2,
+      "static\\ClMpkHLzLMLLW2mibQXhK\\pages\\_app.js": 3
+    },
+    "bySource": {},
+    "usedIds": [
+      0,
+      1,
+      2,
+      3
+    ]
+  }
+}
