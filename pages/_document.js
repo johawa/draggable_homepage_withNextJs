@@ -15,6 +15,15 @@ export default class MyDocument extends Document {
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
           />
+          <meta
+            name="google-site-verification"
+            content="KWPLUXT2KKaqjtm9WBDpfkCMV58i7VmcFOW2_kPsuuM"
+          />
+          <script
+            type="text/javascript"
+            async
+            src="https://www.google-analytics.com/analytics.js"
+          />
 
           <title>Johannes Walenta</title>
         </Head>

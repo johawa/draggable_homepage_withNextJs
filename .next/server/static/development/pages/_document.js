@@ -182,28 +182,45 @@ function (_Document) {
           lineNumber: 14
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("title", {
+      }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("meta", {
+        name: "google-site-verification",
+        content: "KWPLUXT2KKaqjtm9WBDpfkCMV58i7VmcFOW2_kPsuuM",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 19
+          lineNumber: 18
         },
         __self: this
-      }, "Johannes Walenta")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("body", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 21
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_document__WEBPACK_IMPORTED_MODULE_2__["Main"], {
+      }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("script", {
+        type: "text/javascript",
+        async: true,
+        src: "https://www.google-analytics.com/analytics.js",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 22
         },
         __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("title", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 28
+        },
+        __self: this
+      }, "Johannes Walenta")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("body", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 30
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_document__WEBPACK_IMPORTED_MODULE_2__["Main"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 31
+        },
+        __self: this
       }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_document__WEBPACK_IMPORTED_MODULE_2__["NextScript"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 23
+          lineNumber: 32
         },
         __self: this
       })));

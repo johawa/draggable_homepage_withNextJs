@@ -16,9 +16,9 @@ import MyWorkSvg from "../../static/portfolio.svg";
 import SpotifySvg from "../../static/spotify.svg";
 import PaintSvg from "../../static/watercolor.svg";
 //App Logic
-import Spotify from "../../component/Apps/Spotify";
-import MyWork from "../../component/Apps/MyWork";
-import Paint from "../../component/Apps/Paint";
+import Spotify from "../../component/Apps/Spotify/Spotify";
+import MyWork from "../../component/Apps/MyWork/MyWork";
+import Paint from "../../component/Apps/Paint/Paint";
 
 //Watch The Order its Important
 const AppIcons = [
