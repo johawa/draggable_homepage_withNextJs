@@ -291,7 +291,7 @@ ul.app-controls li:hover {
     grid-auto-flow: column;
     position: absolute;
     right: 12px;
-    top: 55px;
+    top: 86px;
 }
 
 .colorpicker:hover {
@@ -303,13 +303,33 @@ ul.app-controls li:hover {
     top: 22px;
     left: -2px;
 }
+.button-box__save {
+    position: absolute;
+    top: 22px;
+    right: -2px !important;
+}
 
 .button-box button {
 
-    background-color: #4caf50;
+    background-color: #000000;
     /* Green */
-    border: 1px solid black;
-    border: none;
+    border: 1px solid #4caf50;  
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.button-box__save button {
+
+    background-color: #000000;
+    /* Green */
+    border: 1px solid #4caf50;
+   
     color: white;
     padding: 10px 20px;
     text-align: center;

@@ -376,10 +376,12 @@ var MyWork = function MyWork(props) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "react-dom");
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _Paint_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Paint.css */ "./component/Apps/Paint/Paint.css");
-/* harmony import */ var _Paint_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_Paint_css__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var dom_to_image__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! dom-to-image */ "dom-to-image");
+/* harmony import */ var dom_to_image__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(dom_to_image__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var file_saver__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! file-saver */ "file-saver");
+/* harmony import */ var file_saver__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(file_saver__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _Paint_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Paint.css */ "./component/Apps/Paint/Paint.css");
+/* harmony import */ var _Paint_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_Paint_css__WEBPACK_IMPORTED_MODULE_3__);
 var _jsxFileName = "C:\\Users\\Johannes\\Desktop\\Next_Homepage\\component\\Apps\\Paint\\Paint.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -400,13 +402,10 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
+ //Download Image
 
 
 
-/* const Paint = props => {
-  return <div id="draw-wrapper" />;
-};
-export default Paint; */
 
 var amountCells = 625; //25 * 25
 
@@ -418,7 +417,7 @@ var Cell = function Cell(props) {
     onClick: props.fill,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 24
     },
     __self: this
   });
@@ -434,7 +433,7 @@ var Color = function Color(props) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 29
     },
     __self: this
   });
@@ -446,7 +445,7 @@ var Button = function Button(props) {
     onClick: props.ClickButton,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41
+      lineNumber: 38
     },
     __self: this
   }, props.title);
@@ -504,6 +503,13 @@ function (_React$Component) {
       });
     }
   }, {
+    key: "downloadLink",
+    value: function downloadLink(event) {
+      dom_to_image__WEBPACK_IMPORTED_MODULE_1___default.a.toBlob(document.getElementById("draw-wrapper")).then(function (blob) {
+        window.saveAs(blob, "My_Art.png");
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
       var _this2 = this;
@@ -511,14 +517,14 @@ function (_React$Component) {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 88
+          lineNumber: 93
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "draw-wrapper",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 89
+          lineNumber: 94
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -528,7 +534,7 @@ function (_React$Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 90
+          lineNumber: 95
         },
         __self: this
       }, this.state.lenght.map(function (item, index) {
@@ -540,7 +546,7 @@ function (_React$Component) {
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 96
+            lineNumber: 101
           },
           __self: this
         });
@@ -548,7 +554,7 @@ function (_React$Component) {
         className: "colorpicker",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 105
+          lineNumber: 110
         },
         __self: this
       }, colors.map(function (clr, index) {
@@ -561,7 +567,7 @@ function (_React$Component) {
           choosen: _this2.state.currentColor === clr ? "5px solid lime" : null,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 108
+            lineNumber: 113
           },
           __self: this
         });
@@ -569,7 +575,7 @@ function (_React$Component) {
         className: "button-box",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 119
+          lineNumber: 124
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Button, {
@@ -579,7 +585,24 @@ function (_React$Component) {
         title: this.state.reset ? "RESET" : "BEGIN TO DRAW",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 120
+          lineNumber: 125
+        },
+        __self: this
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "button-box__save",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 130
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Button, {
+        ClickButton: function ClickButton(event) {
+          return _this2.downloadLink(event);
+        },
+        title: "Download",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 131
         },
         __self: this
       })));
@@ -611,10 +634,30 @@ var Spotify = function Spotify(props) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 4
+      lineNumber: 5
     },
     __self: this
-  }, "Spotify");
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "https://spotify-login-backend.herokuapp.com/",
+    target: "_blank",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: this
+  }, "Go To Spotify App... Please dont mind the loading-time, its still running on a free Heroku Host"))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Spotify);
@@ -3040,6 +3083,28 @@ module.exports = __webpack_require__(/*! ./pages/index.js */"./pages/index.js");
 
 /***/ }),
 
+/***/ "dom-to-image":
+/*!*******************************!*\
+  !*** external "dom-to-image" ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("dom-to-image");
+
+/***/ }),
+
+/***/ "file-saver":
+/*!*****************************!*\
+  !*** external "file-saver" ***!
+  \*****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("file-saver");
+
+/***/ }),
+
 /***/ "react":
 /*!************************!*\
   !*** external "react" ***!
@@ -3070,17 +3135,6 @@ module.exports = require("react-dnd");
 /***/ (function(module, exports) {
 
 module.exports = require("react-dnd-html5-backend");
-
-/***/ }),
-
-/***/ "react-dom":
-/*!****************************!*\
-  !*** external "react-dom" ***!
-  \****************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("react-dom");
 
 /***/ }),
 

@@ -1,4 +1,7 @@
 import React from "react";
+//Download Image
+import domtoimage from "dom-to-image";
+import saveAs from "file-saver";
 
 import "./Paint.css";
 
@@ -77,6 +80,14 @@ class Paint extends React.Component {
     });
   }
 
+  downloadLink(event) {
+    domtoimage
+      .toBlob(document.getElementById("draw-wrapper"))
+      .then(function(blob) {
+        window.saveAs(blob, "My_Art.png");
+      });
+  }
+
   render() {
     return (
       <React.Fragment>
@@ -114,6 +125,12 @@ class Paint extends React.Component {
           <Button
             ClickButton={event => this.resteHanlder(event)}
             title={this.state.reset ? "RESET" : "BEGIN TO DRAW"}
+          />
+        </div>
+        <div className="button-box__save">
+          <Button
+            ClickButton={event => this.downloadLink(event)}
+            title={"Download"}
           />
         </div>
       </React.Fragment>
