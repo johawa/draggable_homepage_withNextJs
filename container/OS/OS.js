@@ -54,7 +54,7 @@ class Desktop extends Component {
   };
 
   onDrop = item => {
-    null;
+    console.log(item, 'drop');
   };
 
   newLoaction = (item, left, top, items, dispatch) => {

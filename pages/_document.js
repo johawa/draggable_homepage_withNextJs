@@ -24,6 +24,11 @@ export default class MyDocument extends Document {
             async
             src="https://www.google-analytics.com/analytics.js"
           />
+          <link
+            href="https://fonts.googleapis.com/css?family=Ubuntu:400,500,700"
+            rel="stylesheet"
+          />
+          <script src="//cdn.iframe.ly/embed.js" async />
 
           <title>Johannes Walenta</title>
         </Head>

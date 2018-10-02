@@ -529,36 +529,78 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 var _jsxFileName = "C:\\Users\\Johannes\\Desktop\\Next_Homepage\\component\\Apps\\Spotify\\Spotify.js";
 
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
-var Spotify = function Spotify(props) {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 5
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 6
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "https://spotify-login-backend.herokuapp.com/",
-    target: "_blank",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 7
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 8
-    },
-    __self: this
-  }, "Go To Spotify App@beta... Please dont mind the loading-time, its still running on a free Heroku Host"))));
-};
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+var Spotify =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(Spotify, _Component);
+
+  function Spotify() {
+    _classCallCheck(this, Spotify);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(Spotify).apply(this, arguments));
+  }
+
+  _createClass(Spotify, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      window.iframely && iframely.load();
+    } //THIS IS TO REMIND ME THAT IT IS A DANGEROUS CROSS ORIGIN CALL
+
+  }, {
+    key: "getIframelyHtml",
+    value: function getIframelyHtml() {
+      return {
+        __html: '<iframe width="800px" height="550px" frameborder="0" src="https://spotify-login-backend.herokuapp.com/" />'
+      };
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 18
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 19
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        dangerouslySetInnerHTML: this.getIframelyHtml(),
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 20
+        },
+        __self: this
+      })));
+    }
+  }]);
+
+  return Spotify;
+}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
 
 /* harmony default export */ __webpack_exports__["default"] = (Spotify);
 
@@ -796,12 +838,13 @@ function (_Component) {
     value: function render() {
       var _this = this;
 
+      var button_title;
       var title;
       var checker = false;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_context__WEBPACK_IMPORTED_MODULE_1__["Consumer"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 23
+          lineNumber: 24
         },
         __self: this
       }, function (value) {
@@ -822,18 +865,42 @@ function (_Component) {
           if (itemSelected.length === 0 && itemOpen.length > 0) {
             //this is not right, due to close apps
             title = items[lastOpenID].name;
+            button_title = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+              className: "Dropdown-Btn App_desc",
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 39
+              },
+              __self: this
+            }, title);
             checker = true;
           } //Choose wich of the opened Apps are selected
 
 
           if (itemSelected.length > 0 && itemOpen.length > 0) {
             title = itemSelected[0].name;
+            button_title = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+              className: "Dropdown-Btn App_desc",
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 47
+              },
+              __self: this
+            }, title);
             checker = true;
           } //none selected and none open
 
 
           if (itemSelected.length === 0 && itemOpen.length === 0) {
-            title = "/C/Johannes-Walenta.html";
+            title = "This is the Webpage of Johannes Walenta";
+            button_title = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+              className: "Dropdown-Btn_blank",
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 55
+              },
+              __self: this
+            }, title);
             checker = false;
           }
         }
@@ -841,21 +908,14 @@ function (_Component) {
           className: "Dropdown",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 52
+            lineNumber: 62
           },
           __self: this
-        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-          className: "Dropdown-Btn App_desc",
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 53
-          },
-          __self: this
-        }, title), checker ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        }, button_title, checker ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "Dropdown-Content",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 55
+            lineNumber: 66
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -863,13 +923,13 @@ function (_Component) {
           onClick: _this.closeAppHandler.bind(_this, items, dispatch, title),
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 56
+            lineNumber: 67
           },
           __self: this
         }, "Quit")) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 69
+            lineNumber: 80
           },
           __self: this
         }));
@@ -1826,7 +1886,6 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 var itemSource = {
   beginDrag: function beginDrag(props) {
-    console.log(props.item);
     return props.item;
   },
   endDrag: function endDrag(props, monitor, component) {
@@ -1868,7 +1927,6 @@ function (_Component) {
         return null;
       }
 
-      console.log(minimized);
       return connectDragPreview && connectDragSource && connectDragPreview(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "app-frame",
         onClick: this.props.clickAppFrame,
@@ -1884,14 +1942,14 @@ function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 43
+          lineNumber: 42
         },
         __self: this
       }, connectDragSource(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "app-header",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 58
+          lineNumber: 57
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_AppFrame_Toolbar__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -1900,14 +1958,14 @@ function (_Component) {
         title: item.name,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 59
+          lineNumber: 58
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "app-header__pattern",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 64
+          lineNumber: 63
         },
         __self: this
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1918,7 +1976,7 @@ function (_Component) {
         onClick: this.props.clickAppBody,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 67
+          lineNumber: 66
         },
         __self: this
       }, this.props.children)));
@@ -2296,7 +2354,7 @@ function (_Component) {
     });
 
     _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "onDrop", function (item) {
-      null;
+      console.log(item, 'drop');
     });
 
     _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "newLoaction", function (item, left, top, items, dispatch) {

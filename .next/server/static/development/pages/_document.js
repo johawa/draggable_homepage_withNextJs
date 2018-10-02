@@ -199,28 +199,44 @@ function (_Document) {
           lineNumber: 22
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("title", {
+      }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("link", {
+        href: "https://fonts.googleapis.com/css?family=Ubuntu:400,500,700",
+        rel: "stylesheet",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 28
+          lineNumber: 27
         },
         __self: this
-      }, "Johannes Walenta")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("body", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 30
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_document__WEBPACK_IMPORTED_MODULE_2__["Main"], {
+      }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("script", {
+        src: "//cdn.iframe.ly/embed.js",
+        async: true,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 31
         },
         __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("title", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 33
+        },
+        __self: this
+      }, "Johannes Walenta")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("body", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 35
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_document__WEBPACK_IMPORTED_MODULE_2__["Main"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 36
+        },
+        __self: this
       }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_document__WEBPACK_IMPORTED_MODULE_2__["NextScript"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 32
+          lineNumber: 37
         },
         __self: this
       })));

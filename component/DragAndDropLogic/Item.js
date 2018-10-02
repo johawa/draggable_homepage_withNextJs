@@ -5,7 +5,6 @@ import Toolbar from "../AppFrame/Toolbar";
 
 const itemSource = {
   beginDrag(props) {
-    console.log(props.item);
     return props.item;
   },
   endDrag(props, monitor, component) {
@@ -22,6 +21,7 @@ function collect(connect, monitor) {
 }
 
 class Item extends Component {
+  
   render() {
     const {
       isDragging,
@@ -34,7 +34,6 @@ class Item extends Component {
     if (isDragging) {
       return null;
     }
-    console.log(minimized);
 
     return (
       connectDragPreview &&

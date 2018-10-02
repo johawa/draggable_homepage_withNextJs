@@ -16,6 +16,7 @@ class NavItem_AppTracker extends Component {
   }
 
   render() {
+    let button_title;
     let title;
     let checker = false;
 
@@ -34,23 +35,33 @@ class NavItem_AppTracker extends Component {
             if (itemSelected.length === 0 && itemOpen.length > 0) {
               //this is not right, due to close apps
               title = items[lastOpenID].name;
+              button_title = (
+                <button className="Dropdown-Btn App_desc">{title}</button>
+              );
               checker = true;
             }
             //Choose wich of the opened Apps are selected
             if (itemSelected.length > 0 && itemOpen.length > 0) {
               title = itemSelected[0].name;
+              button_title = (
+                <button className="Dropdown-Btn App_desc">{title}</button>
+              );
               checker = true;
             }
             //none selected and none open
             if (itemSelected.length === 0 && itemOpen.length === 0) {
-              title = "/C/Johannes-Walenta.html";
+              title = "This is the Webpage of Johannes Walenta";
+              button_title = (
+                <button className="Dropdown-Btn_blank">{title}</button>
+              );
               checker = false;
             }
           }
 
           return (
             <div className="Dropdown">
-              <button className="Dropdown-Btn App_desc">{title}</button>
+              {button_title}
+
               {checker ? (
                 <div className="Dropdown-Content">
                   <a

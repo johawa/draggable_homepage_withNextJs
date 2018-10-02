@@ -1,17 +1,26 @@
-import React from "react";
+import React, { Component } from "react";
 
-const Spotify = props => {
-  return (
-    <div>
+class Spotify extends Component {
+  componentDidMount() {
+    window.iframely && iframely.load();
+  }
+
+  //THIS IS TO REMIND ME THAT IT IS A DANGEROUS CROSS ORIGIN CALL
+  getIframelyHtml() {
+    return {
+      __html:
+        '<iframe width="800px" height="550px" frameborder="0" src="https://spotify-login-backend.herokuapp.com/" />'
+    };
+  }
+
+  render() {
+    return (
       <div>
-        <a href="https://spotify-login-backend.herokuapp.com/" target="_blank">
-          <h3>
-            Go To Spotify App@beta... Please dont mind the loading-time, its still running
-            on a free Heroku Host
-          </h3>
-        </a>
+        <div>
+          <div dangerouslySetInnerHTML={this.getIframelyHtml()} />
+        </div>
       </div>
-    </div>
-  );
-};
+    );
+  }
+}
 export default Spotify;
