@@ -6,7 +6,7 @@ const Spotify = props => {
       <div>
         <a href="https://spotify-login-backend.herokuapp.com/" target="_blank">
           <h3>
-            Go To Spotify App... Please dont mind the loading-time, its still running
+            Go To Spotify App@beta... Please dont mind the loading-time, its still running
             on a free Heroku Host
           </h3>
         </a>

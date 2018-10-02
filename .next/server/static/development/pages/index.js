@@ -177,37 +177,41 @@ function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      var loaded = this.state.loaded;
-      return loaded ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_context__WEBPACK_IMPORTED_MODULE_1__["Provider"], {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_context__WEBPACK_IMPORTED_MODULE_1__["Provider"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 28
+          lineNumber: 27
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 29
+          lineNumber: 28
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_hoc_Layout_Layout__WEBPACK_IMPORTED_MODULE_3__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 30
+          lineNumber: 29
         },
         __self: this
-      }))) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_component_IntroAnimation_IntroAnimation__WEBPACK_IMPORTED_MODULE_4__["default"], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 34
-        },
-        __self: this
-      });
+      })));
     }
   }]);
 
   return Wrapper;
 }(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
+/* let { loaded } = this.state;
+return loaded ? (
+  <Provider>
+    <React.Fragment>
+      <Layout />
+    </React.Fragment>
+  </Provider>
+) : (
+  <IntroAnimation />
+); */
+
 
 
 
@@ -657,7 +661,7 @@ var Spotify = function Spotify(props) {
       lineNumber: 8
     },
     __self: this
-  }, "Go To Spotify App... Please dont mind the loading-time, its still running on a free Heroku Host"))));
+  }, "Go To Spotify App@beta... Please dont mind the loading-time, its still running on a free Heroku Host"))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Spotify);
@@ -1309,9 +1313,18 @@ var NavItem_Help = function NavItem_Help(props) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _context__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../context */ "./context.js");
 var _jsxFileName = "C:\\Users\\Johannes\\Desktop\\Next_Homepage\\component\\DesktopLogic\\Navbar\\NavItem_Start.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
+
+function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -1330,6 +1343,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 
 
 
@@ -1359,6 +1373,22 @@ function (_Component) {
   }
 
   _createClass(NavItem_Start, [{
+    key: "openApp",
+    value: function openApp(dispatch, items, value, id) {
+      value.lastOpenID = id;
+
+      var updatedItems = _toConsumableArray(items);
+
+      var ItemToUpdate = updatedItems.find(function (item) {
+        return item.id === id;
+      });
+      ItemToUpdate.visible = true;
+      dispatch({
+        type: "OPEN_APP",
+        payload: updatedItems
+      });
+    }
+  }, {
     key: "closeWindow",
     value: function closeWindow() {
       console.log("close window");
@@ -1369,114 +1399,125 @@ function (_Component) {
     value: function render() {
       var _this2 = this;
 
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "Dropdown",
-        onMouseEnter: function onMouseEnter() {
-          return _this2.setState({
-            toggler: true
-          });
-        },
-        onMouseLeave: function onMouseLeave() {
-          return _this2.setState({
-            toggler: false
-          });
-        },
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_context__WEBPACK_IMPORTED_MODULE_1__["Consumer"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 14
+          lineNumber: 30
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        className: "Dropdown-Btn",
-        style: {
-          background: this.state.toggler ? "#B68282" : "linear-gradient(to right, #0099f7, #f11712)",
-          backgroundSize: "150% 150%",
-          backgroundPosition: "center",
-          paddingRight: "45px",
-          paddingLeft: "40px"
-        },
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 19
-        },
-        __self: this
-      }, "Johannes Walenta"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "Dropdown-Content",
-        style: {
-          width: "100%",
-          textAlign: "start"
-        },
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 33
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        style: {
-          paddingLeft: "25px"
-        },
-        href: "#",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 37
-        },
-        __self: this
-      }, " ", "About Me"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 41
-        },
-        __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        style: {
-          paddingLeft: "25px"
-        },
-        href: "https://codepen.io/timebasher/",
-        target: "_blank",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 42
-        },
-        __self: this
-      }, " ", "CodePen"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        style: {
-          paddingLeft: "25px"
-        },
-        href: "https://github.com/timebasher",
-        target: "_blank",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 50
-        },
-        __self: this
-      }, " ", "Github"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        style: {
-          paddingLeft: "25px"
-        },
-        href: "#",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 58
-        },
-        __self: this
-      }, " ", "Email"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 62
-        },
-        __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        style: {
-          paddingLeft: "25px"
-        },
-        href: "#",
-        onClick: this.closeWindow.bind(this),
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 63
-        },
-        __self: this
-      }, " ", "Shut Down")));
+      }, function (value) {
+        var dispatch = value.dispatch,
+            items = value.items;
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "Dropdown",
+          onMouseEnter: function onMouseEnter() {
+            return _this2.setState({
+              toggler: true
+            });
+          },
+          onMouseLeave: function onMouseLeave() {
+            return _this2.setState({
+              toggler: false
+            });
+          },
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 34
+          },
+          __self: this
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+          className: "Dropdown-Btn",
+          style: {
+            background: _this2.state.toggler ? "#B68282" : "linear-gradient(to right, #0099f7, #f11712)",
+            backgroundSize: "150% 150%",
+            backgroundPosition: "center",
+            paddingRight: "45px",
+            paddingLeft: "40px"
+          },
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 39
+          },
+          __self: this
+        }, "Johannes Walenta"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "Dropdown-Content",
+          style: {
+            width: "100%",
+            textAlign: "start"
+          },
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 53
+          },
+          __self: this
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+          style: {
+            paddingLeft: "25px"
+          },
+          href: "#",
+          onClick: _this2.openApp.bind(_this2, dispatch, items, value, 3),
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 57
+          },
+          __self: this
+        }, " ", "About Me"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 65
+          },
+          __self: this
+        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+          style: {
+            paddingLeft: "25px"
+          },
+          href: "https://codepen.io/timebasher/",
+          target: "_blank",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 66
+          },
+          __self: this
+        }, " ", "CodePen"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+          style: {
+            paddingLeft: "25px"
+          },
+          href: "https://github.com/timebasher",
+          target: "_blank",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 74
+          },
+          __self: this
+        }, " ", "Github"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+          style: {
+            paddingLeft: "25px"
+          },
+          href: "#",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 82
+          },
+          __self: this
+        }, " ", "Email"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 86
+          },
+          __self: this
+        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+          style: {
+            paddingLeft: "25px"
+          },
+          href: "#",
+          onClick: _this2.closeWindow.bind(_this2),
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 87
+          },
+          __self: this
+        }, " ", "Shut Down")));
+      });
     }
   }]);
 
@@ -2717,7 +2758,7 @@ function (_Component) {
         scale: 1,
         minimized: false,
         visible: false,
-        color: "aqua"
+        color: "#0004FF"
       }, {
         id: 1,
         name: "Paint.exe",
@@ -2728,7 +2769,7 @@ function (_Component) {
         scale: 1,
         minimized: false,
         visible: false,
-        color: "yellow"
+        color: "#FFF200"
       }, {
         id: 2,
         name: "Spotify.exe",
@@ -2739,7 +2780,18 @@ function (_Component) {
         scale: 1,
         minimized: false,
         visible: false,
-        color: "red"
+        color: "#EA1B19"
+      }, {
+        id: 3,
+        name: "AboutMe.txt",
+        top: 180,
+        left: 330,
+        width: 650,
+        height: 450,
+        scale: 1,
+        minimized: false,
+        visible: false,
+        color: "#FFF200"
       }],
       focusedFrameId: null,
       dispatch: function dispatch(action) {
@@ -2759,7 +2811,7 @@ function (_Component) {
         value: this.state,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 101
+          lineNumber: 113
         },
         __self: this
       }, this.props.children);

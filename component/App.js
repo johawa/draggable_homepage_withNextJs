@@ -23,15 +23,23 @@ export default class Wrapper extends Component {
   }
 
   render() {
-    let { loaded } = this.state;
-    return loaded ? (
+    return (
       <Provider>
         <React.Fragment>
           <Layout />
         </React.Fragment>
       </Provider>
-    ) : (
-      <IntroAnimation />
     );
   }
 }
+
+/* let { loaded } = this.state;
+return loaded ? (
+  <Provider>
+    <React.Fragment>
+      <Layout />
+    </React.Fragment>
+  </Provider>
+) : (
+  <IntroAnimation />
+); */

@@ -65,7 +65,7 @@ export class Provider extends Component {
         scale: 1,
         minimized: false,
         visible: false,
-        color: "aqua"
+        color: "#0004FF"
       },
       {
         id: 1,
@@ -77,7 +77,7 @@ export class Provider extends Component {
         scale: 1,
         minimized: false,
         visible: false,
-        color: "yellow"
+        color: "#FFF200"
       },
       {
         id: 2,
@@ -89,7 +89,19 @@ export class Provider extends Component {
         scale: 1,
         minimized: false,
         visible: false,
-        color: "red"
+        color: "#EA1B19"
+      },
+      {
+        id: 3,
+        name: "AboutMe.txt",
+        top: 180,
+        left: 330,
+        width: 650,
+        height: 450,
+        scale: 1,
+        minimized: false,
+        visible: false,
+        color: "#FFF200"
       }
     ],
     focusedFrameId: null,
