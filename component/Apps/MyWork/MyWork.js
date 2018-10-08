@@ -1,6 +1,8 @@
 import React from "react";
 
+import MyWorkContent from "./MyWorkContent";
+
 const MyWork = props => {
-  return <div>MyWork</div>;
+  return <MyWorkContent />;
 };
 export default MyWork;

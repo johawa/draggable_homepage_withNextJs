@@ -19,6 +19,7 @@ import PaintSvg from "../../static/watercolor.svg";
 import Spotify from "../../component/Apps/Spotify/Spotify";
 import MyWork from "../../component/Apps/MyWork/MyWork";
 import Paint from "../../component/Apps/Paint/Paint";
+import AboutMe from "../../component/Apps/AboutMe/AboutMe";
 
 //Watch The Order its Important
 const AppIcons = [
@@ -54,7 +55,7 @@ class Desktop extends Component {
   };
 
   onDrop = item => {
-    console.log(item, 'drop');
+    console.log(item, "drop");
   };
 
   newLoaction = (item, left, top, items, dispatch) => {
@@ -160,7 +161,7 @@ class Desktop extends Component {
 
   render() {
     //Watch The Order its Important
-    const Apps = [<MyWork />, <Paint />, <Spotify />];
+    const Apps = [<MyWork />, <Paint />, <Spotify />, <AboutMe />];
 
     return (
       <Consumer>

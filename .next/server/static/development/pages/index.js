@@ -330,6 +330,96 @@ function (_Component) {
 
 /***/ }),
 
+/***/ "./component/Apps/AboutMe/AboutMe.js":
+/*!*******************************************!*\
+  !*** ./component/Apps/AboutMe/AboutMe.js ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_syntax_highlighter__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-syntax-highlighter */ "react-syntax-highlighter");
+/* harmony import */ var react_syntax_highlighter__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_syntax_highlighter__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_syntax_highlighter_styles_hljs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-syntax-highlighter/styles/hljs */ "react-syntax-highlighter/styles/hljs");
+/* harmony import */ var react_syntax_highlighter_styles_hljs__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_syntax_highlighter_styles_hljs__WEBPACK_IMPORTED_MODULE_2__);
+var _jsxFileName = "C:\\Users\\Johannes\\Desktop\\Next_Homepage\\component\\Apps\\AboutMe\\AboutMe.js";
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+
+/*
+&#123  Left curly brace
+&#125  Right curly brace
+&#59   Semi-colon 
+&#44   Comma
+*/
+
+var AboutMe =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(AboutMe, _Component);
+
+  function AboutMe() {
+    _classCallCheck(this, AboutMe);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(AboutMe).apply(this, arguments));
+  }
+
+  _createClass(AboutMe, [{
+    key: "render",
+    value: function render() {
+      var foo = "\n    const me = {  \n          name: 'Johannes',\n          lastname: 'Walenta',\n          nationality: 'German'        \n    };\n\n    let profiles = {\n        github: 'https://github.com/timebasher',\n        twitter: 'https://codepen.io/timebasher/', \n        eMail: 'johannes.walenta@googlemail.com'\n    };    \n\n    \n    Object.assign({}, me, profiles )\n\n\n\n    \n\n\n\n\n\n\n    ";
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 41
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_syntax_highlighter__WEBPACK_IMPORTED_MODULE_1___default.a, {
+        language: "javascript",
+        style: react_syntax_highlighter_styles_hljs__WEBPACK_IMPORTED_MODULE_2__["tomorrowNightBlue"],
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 42
+        },
+        __self: this
+      }, foo));
+    }
+  }]);
+
+  return AboutMe;
+}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (AboutMe);
+{
+  /*  <SyntaxHighlighter language="javascript" style={tomorrowNightBlue}>
+        {foo}
+      </SyntaxHighlighter> */
+}
+
+/***/ }),
+
 /***/ "./component/Apps/MyWork/MyWork.js":
 /*!*****************************************!*\
   !*** ./component/Apps/MyWork/MyWork.js ***!
@@ -341,20 +431,50 @@ function (_Component) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _MyWorkContent__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./MyWorkContent */ "./component/Apps/MyWork/MyWorkContent.js");
 var _jsxFileName = "C:\\Users\\Johannes\\Desktop\\Next_Homepage\\component\\Apps\\MyWork\\MyWork.js";
 
 
+
 var MyWork = function MyWork(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_MyWorkContent__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    },
+    __self: this
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (MyWork);
+
+/***/ }),
+
+/***/ "./component/Apps/MyWork/MyWorkContent.js":
+/*!************************************************!*\
+  !*** ./component/Apps/MyWork/MyWorkContent.js ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "C:\\Users\\Johannes\\Desktop\\Next_Homepage\\component\\Apps\\MyWork\\MyWorkContent.js";
+
+
+var MyWorkContent = function MyWorkContent(props) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 4
+      lineNumber: 5
     },
     __self: this
   }, "MyWork");
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (MyWork);
+/* harmony default export */ __webpack_exports__["default"] = (MyWorkContent);
 
 /***/ }),
 
@@ -631,6 +751,10 @@ function (_React$Component) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var query_string__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! query-string */ "query-string");
+/* harmony import */ var query_string__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(query_string__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "prop-types");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
 var _jsxFileName = "C:\\Users\\Johannes\\Desktop\\Next_Homepage\\component\\Apps\\Spotify\\Spotify.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -643,13 +767,17 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
 
 
 
@@ -659,53 +787,80 @@ function (_Component) {
   _inherits(Spotify, _Component);
 
   function Spotify() {
+    var _getPrototypeOf2;
+
+    var _this;
+
     _classCallCheck(this, Spotify);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(Spotify).apply(this, arguments));
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(Spotify)).call.apply(_getPrototypeOf2, [this].concat(args)));
+
+    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "state", {
+      access_token: ""
+    });
+
+    return _this;
   }
 
   _createClass(Spotify, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      window.iframely && iframely.load();
-    } //THIS IS TO REMIND ME THAT IT IS A DANGEROUS CROSS ORIGIN CALL
+      var parsed = query_string__WEBPACK_IMPORTED_MODULE_1___default.a.parse(window.location.search);
+      var token = parsed.access_token;
+      this.setState({
+        access_token: token
+      });
 
+      if (token === undefined || token === null || token === "") {
+        console.log("token_error");
+      }
+    }
   }, {
     key: "getIframelyHtml",
     value: function getIframelyHtml() {
+      var access_token = this.state.access_token;
       return {
-        __html: '<iframe width="800px" height="550px" frameborder="0" src="https://spotify-login-backend.herokuapp.com/" />'
+        __html: "<iframe height=550 width=800 src=http://localhost:3001/?access_token=".concat(access_token, " />")
       };
     }
   }, {
     key: "render",
     value: function render() {
+      //return <div dangerouslySetInnerHTML={this.getIframelyHtml()} />;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 18
+          lineNumber: 30
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "https://spotify-login-backend.herokuapp.com/",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 19
+          lineNumber: 31
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, "Login"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         dangerouslySetInnerHTML: this.getIframelyHtml(),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 20
+          lineNumber: 32
         },
         __self: this
-      })));
+      }));
     }
   }]);
 
   return Spotify;
 }(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
 
+Spotify.propTypes = {
+  access_token: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.string
+};
 /* harmony default export */ __webpack_exports__["default"] = (Spotify);
 
 /***/ }),
@@ -2361,6 +2516,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _component_Apps_Spotify_Spotify__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../component/Apps/Spotify/Spotify */ "./component/Apps/Spotify/Spotify.js");
 /* harmony import */ var _component_Apps_MyWork_MyWork__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../component/Apps/MyWork/MyWork */ "./component/Apps/MyWork/MyWork.js");
 /* harmony import */ var _component_Apps_Paint_Paint__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../component/Apps/Paint/Paint */ "./component/Apps/Paint/Paint.js");
+/* harmony import */ var _component_Apps_AboutMe_AboutMe__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../../component/Apps/AboutMe/AboutMe */ "./component/Apps/AboutMe/AboutMe.js");
 var _jsxFileName = "C:\\Users\\Johannes\\Desktop\\Next_Homepage\\container\\OS\\OS.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -2407,6 +2563,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
  //App Logic
+
 
 
 
@@ -2458,7 +2615,7 @@ function (_Component) {
     });
 
     _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "onDrop", function (item) {
-      console.log(item, 'drop');
+      console.log(item, "drop");
     });
 
     _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "newLoaction", function (item, left, top, items, dispatch) {
@@ -2592,26 +2749,32 @@ function (_Component) {
       var Apps = [react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_component_Apps_MyWork_MyWork__WEBPACK_IMPORTED_MODULE_14__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 163
+          lineNumber: 164
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_component_Apps_Paint_Paint__WEBPACK_IMPORTED_MODULE_15__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 163
+          lineNumber: 164
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_component_Apps_Spotify_Spotify__WEBPACK_IMPORTED_MODULE_13__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 163
+          lineNumber: 164
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_component_Apps_AboutMe_AboutMe__WEBPACK_IMPORTED_MODULE_16__["default"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 164
         },
         __self: this
       })];
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_context__WEBPACK_IMPORTED_MODULE_4__["Consumer"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 166
+          lineNumber: 167
         },
         __self: this
       }, function (value) {
@@ -2623,7 +2786,7 @@ function (_Component) {
           id: "DesktopWrapper",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 170
+            lineNumber: 171
           },
           __self: this
         }, items.map(function (item, index) {
@@ -2639,13 +2802,13 @@ function (_Component) {
             in: item.visible,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 173
+              lineNumber: 174
             },
             __self: this
           }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 184
+              lineNumber: 185
             },
             __self: this
           }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_component_DragAndDropLogic_Item__WEBPACK_IMPORTED_MODULE_7__["default"], {
@@ -2662,7 +2825,7 @@ function (_Component) {
             },
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 185
+              lineNumber: 186
             },
             __self: this
           }, //THE APP TO OUTPUT
@@ -2677,7 +2840,7 @@ function (_Component) {
             index: index,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 228
+              lineNumber: 229
             },
             __self: this
           }, item.name);
@@ -2687,7 +2850,7 @@ function (_Component) {
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 246
+            lineNumber: 247
           },
           __self: this
         }));
@@ -3215,6 +3378,28 @@ module.exports = require("file-saver");
 
 /***/ }),
 
+/***/ "prop-types":
+/*!*****************************!*\
+  !*** external "prop-types" ***!
+  \*****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("prop-types");
+
+/***/ }),
+
+/***/ "query-string":
+/*!*******************************!*\
+  !*** external "query-string" ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("query-string");
+
+/***/ }),
+
 /***/ "react":
 /*!************************!*\
   !*** external "react" ***!
@@ -3256,6 +3441,28 @@ module.exports = require("react-dnd-html5-backend");
 /***/ (function(module, exports) {
 
 module.exports = require("react-live-clock");
+
+/***/ }),
+
+/***/ "react-syntax-highlighter":
+/*!*******************************************!*\
+  !*** external "react-syntax-highlighter" ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("react-syntax-highlighter");
+
+/***/ }),
+
+/***/ "react-syntax-highlighter/styles/hljs":
+/*!*******************************************************!*\
+  !*** external "react-syntax-highlighter/styles/hljs" ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("react-syntax-highlighter/styles/hljs");
 
 /***/ }),
 
