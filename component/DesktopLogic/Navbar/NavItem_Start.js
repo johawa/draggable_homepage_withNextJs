@@ -79,19 +79,7 @@ class NavItem_Start extends Component {
                   {" "}
                   Github
                 </a>
-                <a style={{ paddingLeft: "25px" }} href="#">
-                  {" "}
-                  Email
-                </a>
-                <hr />
-                <a
-                  style={{ paddingLeft: "25px" }}
-                  href="#"
-                  onClick={this.closeWindow.bind(this)}
-                >
-                  {" "}
-                  Shut Down
-                </a>
+               
               </div>
             </div>
           );

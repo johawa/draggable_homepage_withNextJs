@@ -20,7 +20,7 @@
 }
 
 .GridCell {
-    background-color: grey;
+    background-color: #6cc3af;
 }
 
 .GridCell:hover {
@@ -58,31 +58,28 @@
 .button-box button {
 
     background-color: #000000;
-    /* Green */
-    border: 1px solid #4caf50;  
+    border: none;
     color: white;
-    padding: 10px 20px;
+    padding: 13px 20px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 12px;
-    margin: 4px 2px;
+    margin: 8px 2px;
     cursor: pointer;
 }
 
 .button-box__save button {
 
     background-color: #000000;
-    /* Green */
-    border: 1px solid #4caf50;
-   
+    border: none;
     color: white;
-    padding: 10px 20px;
+    padding: 13px 20px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 12px;
-    margin: 4px 2px;
+    margin: 8px 2px;
     cursor: pointer;
 }
 

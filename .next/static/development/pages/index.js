@@ -647,10 +647,8 @@ function (_React$Component) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var query_string__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! query-string */ "./node_modules/query-string/index.js");
-/* harmony import */ var query_string__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(query_string__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _Spotify_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Spotify.css */ "./component/Apps/Spotify/Spotify.css");
+/* harmony import */ var _Spotify_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_Spotify_css__WEBPACK_IMPORTED_MODULE_1__);
 var _jsxFileName = "C:\\Users\\Johannes\\Desktop\\Next_Homepage\\component\\Apps\\Spotify\\Spotify.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -663,16 +661,13 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 
 
 
@@ -683,80 +678,69 @@ function (_Component) {
   _inherits(Spotify, _Component);
 
   function Spotify() {
-    var _getPrototypeOf2;
-
-    var _this;
-
     _classCallCheck(this, Spotify);
 
-    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-
-    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(Spotify)).call.apply(_getPrototypeOf2, [this].concat(args)));
-
-    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "state", {
-      access_token: ""
-    });
-
-    return _this;
+    return _possibleConstructorReturn(this, _getPrototypeOf(Spotify).apply(this, arguments));
   }
 
   _createClass(Spotify, [{
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      var parsed = query_string__WEBPACK_IMPORTED_MODULE_1___default.a.parse(window.location.search);
-      var token = parsed.access_token;
-      this.setState({
-        access_token: token
-      });
-
-      if (token === undefined || token === null || token === "") {
-        console.log("token_error");
-      }
-    }
-  }, {
-    key: "getIframelyHtml",
-    value: function getIframelyHtml() {
-      var access_token = this.state.access_token;
-      return {
-        __html: "<iframe height=550 width=800 src=http://localhost:3001/?access_token=".concat(access_token, " />")
-      };
-    }
-  }, {
     key: "render",
     value: function render() {
-      //return <div dangerouslySetInnerHTML={this.getIframelyHtml()} />;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "wrapper_spotify_frame",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 30
+          lineNumber: 8
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "https://spotify-login-backend.herokuapp.com/",
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+        className: "h1_spotify_frame",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 31
+          lineNumber: 9
         },
         __self: this
-      }, "Login"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        dangerouslySetInnerHTML: this.getIframelyHtml(),
+      }, "SPOTIFY COVERFLOW."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
+        style: {
+          color: "white",
+          fontSize: "13px"
+        },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 32
+          lineNumber: 10
         },
         __self: this
-      }));
+      }, "// Works best on Chrome // Spotify doesn't support Safari //"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "center_spotify_frame",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 13
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+        action: "https://spotify-login-backend.herokuapp.com/login",
+        target: "_blank",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 14
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        className: "button_spotify_frame",
+        type: "submit",
+        value: "Login With Spotify",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 18
+        },
+        __self: this
+      }))));
     }
   }]);
 
   return Spotify;
 }(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
 
-Spotify.propTypes = {
-  access_token: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.string
-};
 /* harmony default export */ __webpack_exports__["default"] = (Spotify);
 
 /***/ }),
@@ -1600,34 +1584,7 @@ function (_Component) {
             lineNumber: 74
           },
           __self: this
-        }, " ", "Github"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-          style: {
-            paddingLeft: "25px"
-          },
-          href: "#",
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 82
-          },
-          __self: this
-        }, " ", "Email"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 86
-          },
-          __self: this
-        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-          style: {
-            paddingLeft: "25px"
-          },
-          href: "#",
-          onClick: _this2.closeWindow.bind(_this2),
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 87
-          },
-          __self: this
-        }, " ", "Shut Down")));
+        }, " ", "Github")));
       });
     }
   }]);
@@ -2126,7 +2083,8 @@ function (_Component) {
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "app-frame-body".concat(minimized ? " minimized" : " normal"),
         style: {
-          height: "80%"
+          height: "calc(100% - 50px)" //Toolbar + Spacing = 50px
+
         },
         onClick: this.props.clickAppBody,
         __source: {
@@ -2886,7 +2844,7 @@ function (_Component) {
         scale: 1,
         minimized: false,
         visible: false,
-        color: "#FFF200"
+        color: "#6cc3af"
       }, {
         id: 2,
         name: "Spotify.exe",
@@ -4295,112 +4253,6 @@ module.exports = function (key) {
 var $export = __webpack_require__(/*! ./_export */ "./node_modules/core-js/library/modules/_export.js");
 
 $export($export.S + $export.F, 'Object', { assign: __webpack_require__(/*! ./_object-assign */ "./node_modules/core-js/library/modules/_object-assign.js") });
-
-
-/***/ }),
-
-/***/ "./node_modules/decode-uri-component/index.js":
-/*!****************************************************!*\
-  !*** ./node_modules/decode-uri-component/index.js ***!
-  \****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var token = '%[a-f0-9]{2}';
-var singleMatcher = new RegExp(token, 'gi');
-var multiMatcher = new RegExp('(' + token + ')+', 'gi');
-
-function decodeComponents(components, split) {
-	try {
-		// Try to decode the entire string first
-		return decodeURIComponent(components.join(''));
-	} catch (err) {
-		// Do nothing
-	}
-
-	if (components.length === 1) {
-		return components;
-	}
-
-	split = split || 1;
-
-	// Split the array in 2 parts
-	var left = components.slice(0, split);
-	var right = components.slice(split);
-
-	return Array.prototype.concat.call([], decodeComponents(left), decodeComponents(right));
-}
-
-function decode(input) {
-	try {
-		return decodeURIComponent(input);
-	} catch (err) {
-		var tokens = input.match(singleMatcher);
-
-		for (var i = 1; i < tokens.length; i++) {
-			input = decodeComponents(tokens, i).join('');
-
-			tokens = input.match(singleMatcher);
-		}
-
-		return input;
-	}
-}
-
-function customDecodeURIComponent(input) {
-	// Keep track of all the replacements and prefill the map with the `BOM`
-	var replaceMap = {
-		'%FE%FF': '\uFFFD\uFFFD',
-		'%FF%FE': '\uFFFD\uFFFD'
-	};
-
-	var match = multiMatcher.exec(input);
-	while (match) {
-		try {
-			// Decode as big chunks as possible
-			replaceMap[match[0]] = decodeURIComponent(match[0]);
-		} catch (err) {
-			var result = decode(match[0]);
-
-			if (result !== match[0]) {
-				replaceMap[match[0]] = result;
-			}
-		}
-
-		match = multiMatcher.exec(input);
-	}
-
-	// Add `%C2` at the end of the map to make sure it does not replace the combinator before everything else
-	replaceMap['%C2'] = '\uFFFD';
-
-	var entries = Object.keys(replaceMap);
-
-	for (var i = 0; i < entries.length; i++) {
-		// Replace all decoded components
-		var key = entries[i];
-		input = input.replace(new RegExp(key, 'g'), replaceMap[key]);
-	}
-
-	return input;
-}
-
-module.exports = function (encodedURI) {
-	if (typeof encodedURI !== 'string') {
-		throw new TypeError('Expected `encodedURI` to be of type `string`, got `' + typeof encodedURI + '`');
-	}
-
-	try {
-		encodedURI = encodedURI.replace(/\+/g, ' ');
-
-		// Try the built in decoder first
-		return decodeURIComponent(encodedURI);
-	} catch (err) {
-		// Fallback to a more advanced decoder
-		return customDecodeURIComponent(encodedURI);
-	}
-};
 
 
 /***/ }),
@@ -48824,249 +48676,6 @@ module.exports = (__webpack_require__(/*! dll-reference dll_5d62d38be3592dca3a42
 
 /***/ }),
 
-/***/ "./node_modules/query-string/index.js":
-/*!********************************************!*\
-  !*** ./node_modules/query-string/index.js ***!
-  \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-const strictUriEncode = __webpack_require__(/*! strict-uri-encode */ "./node_modules/strict-uri-encode/index.js");
-const decodeComponent = __webpack_require__(/*! decode-uri-component */ "./node_modules/decode-uri-component/index.js");
-
-function encoderForArrayFormat(options) {
-	switch (options.arrayFormat) {
-		case 'index':
-			return (key, value, index) => {
-				return value === null ? [
-					encode(key, options),
-					'[',
-					index,
-					']'
-				].join('') : [
-					encode(key, options),
-					'[',
-					encode(index, options),
-					']=',
-					encode(value, options)
-				].join('');
-			};
-		case 'bracket':
-			return (key, value) => {
-				return value === null ? [encode(key, options), '[]'].join('') : [
-					encode(key, options),
-					'[]=',
-					encode(value, options)
-				].join('');
-			};
-		default:
-			return (key, value) => {
-				return value === null ? encode(key, options) : [
-					encode(key, options),
-					'=',
-					encode(value, options)
-				].join('');
-			};
-	}
-}
-
-function parserForArrayFormat(options) {
-	let result;
-
-	switch (options.arrayFormat) {
-		case 'index':
-			return (key, value, accumulator) => {
-				result = /\[(\d*)\]$/.exec(key);
-
-				key = key.replace(/\[\d*\]$/, '');
-
-				if (!result) {
-					accumulator[key] = value;
-					return;
-				}
-
-				if (accumulator[key] === undefined) {
-					accumulator[key] = {};
-				}
-
-				accumulator[key][result[1]] = value;
-			};
-		case 'bracket':
-			return (key, value, accumulator) => {
-				result = /(\[\])$/.exec(key);
-				key = key.replace(/\[\]$/, '');
-
-				if (!result) {
-					accumulator[key] = value;
-					return;
-				}
-
-				if (accumulator[key] === undefined) {
-					accumulator[key] = [value];
-					return;
-				}
-
-				accumulator[key] = [].concat(accumulator[key], value);
-			};
-		default:
-			return (key, value, accumulator) => {
-				if (accumulator[key] === undefined) {
-					accumulator[key] = value;
-					return;
-				}
-
-				accumulator[key] = [].concat(accumulator[key], value);
-			};
-	}
-}
-
-function encode(value, options) {
-	if (options.encode) {
-		return options.strict ? strictUriEncode(value) : encodeURIComponent(value);
-	}
-
-	return value;
-}
-
-function decode(value, options) {
-	if (options.decode) {
-		return decodeComponent(value);
-	}
-
-	return value;
-}
-
-function keysSorter(input) {
-	if (Array.isArray(input)) {
-		return input.sort();
-	}
-
-	if (typeof input === 'object') {
-		return keysSorter(Object.keys(input))
-			.sort((a, b) => Number(a) - Number(b))
-			.map(key => input[key]);
-	}
-
-	return input;
-}
-
-function extract(input) {
-	const queryStart = input.indexOf('?');
-	if (queryStart === -1) {
-		return '';
-	}
-
-	return input.slice(queryStart + 1);
-}
-
-function parse(input, options) {
-	options = Object.assign({decode: true, arrayFormat: 'none'}, options);
-
-	const formatter = parserForArrayFormat(options);
-
-	// Create an object with no prototype
-	const ret = Object.create(null);
-
-	if (typeof input !== 'string') {
-		return ret;
-	}
-
-	input = input.trim().replace(/^[?#&]/, '');
-
-	if (!input) {
-		return ret;
-	}
-
-	for (const param of input.split('&')) {
-		let [key, value] = param.replace(/\+/g, ' ').split('=');
-
-		// Missing `=` should be `null`:
-		// http://w3.org/TR/2012/WD-url-20120524/#collect-url-parameters
-		value = value === undefined ? null : decode(value, options);
-
-		formatter(decode(key, options), value, ret);
-	}
-
-	return Object.keys(ret).sort().reduce((result, key) => {
-		const value = ret[key];
-		if (Boolean(value) && typeof value === 'object' && !Array.isArray(value)) {
-			// Sort object keys, not values
-			result[key] = keysSorter(value);
-		} else {
-			result[key] = value;
-		}
-
-		return result;
-	}, Object.create(null));
-}
-
-exports.extract = extract;
-exports.parse = parse;
-
-exports.stringify = (obj, options) => {
-	if (!obj) {
-		return '';
-	}
-
-	options = Object.assign({
-		encode: true,
-		strict: true,
-		arrayFormat: 'none'
-	}, options);
-
-	const formatter = encoderForArrayFormat(options);
-	const keys = Object.keys(obj);
-
-	if (options.sort !== false) {
-		keys.sort(options.sort);
-	}
-
-	return keys.map(key => {
-		const value = obj[key];
-
-		if (value === undefined) {
-			return '';
-		}
-
-		if (value === null) {
-			return encode(key, options);
-		}
-
-		if (Array.isArray(value)) {
-			const result = [];
-
-			for (const value2 of value.slice()) {
-				if (value2 === undefined) {
-					continue;
-				}
-
-				result.push(formatter(key, value2, result.length));
-			}
-
-			return result.join('&');
-		}
-
-		return encode(key, options) + '=' + encode(value, options);
-	}).filter(x => x.length > 0).join('&');
-};
-
-exports.parseUrl = (input, options) => {
-	const hashStart = input.indexOf('#');
-	if (hashStart !== -1) {
-		input = input.slice(0, hashStart);
-	}
-
-	return {
-		url: input.split('?')[0] || '',
-		query: parse(extract(input), options)
-	};
-};
-
-
-/***/ }),
-
 /***/ "./node_modules/react-dnd-html5-backend/lib/BrowserDetector.js":
 /*!*********************************************************************!*\
   !*** ./node_modules/react-dnd-html5-backend/lib/BrowserDetector.js ***!
@@ -66769,20 +66378,6 @@ module.exports = function shallowEqual(objA, objB, compare, compareContext) {
 
   return true;
 };
-
-
-/***/ }),
-
-/***/ "./node_modules/strict-uri-encode/index.js":
-/*!*************************************************!*\
-  !*** ./node_modules/strict-uri-encode/index.js ***!
-  \*************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-module.exports = str => encodeURIComponent(str).replace(/[!'()*]/g, x => `%${x.charCodeAt(0).toString(16).toUpperCase()}`);
 
 
 /***/ }),

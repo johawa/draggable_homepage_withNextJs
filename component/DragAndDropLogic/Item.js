@@ -66,7 +66,7 @@ class Item extends Component {
           <div
             className={`app-frame-body${minimized ? " minimized" : " normal"}`}
             style={{
-              height: "80%"
+              height: "calc(100% - 50px)" //Toolbar + Spacing = 50px
             }}
             onClick={this.props.clickAppBody}
           >
