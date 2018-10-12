@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "node server.js",
+    "dev": "node server.js -p $PORT",
     "build": "./node_modules/next/dist/bin/next build",
     "heroku-postbuild": "./node_modules/next/dist/bin/next build",
-    "start": "node server.js"
+    "start": "node server.js -p $PORT"
   },
   "keywords": [],
   "author": "Johannes Walenta",

@@ -13,7 +13,7 @@ class TextareaValidator extends ValidatorComponent {
 
     return (
       <div>
-        <textarea
+        <textarea          
           rows="4"
           cols="50"
           {...rest}

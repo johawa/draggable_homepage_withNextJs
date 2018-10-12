@@ -102,6 +102,18 @@ export class Provider extends Component {
         minimized: false,
         visible: false,
         color: "#FFF200"
+      },
+      {
+        id: 4,
+        name: "Contact.mail",
+        top: 180,
+        left: 330,
+        width: 500,
+        height: 330,
+        scale: 1,
+        minimized: false,
+        visible: false,
+        color: "#FFF200"
       }
     ],
     focusedFrameId: null,
