@@ -26,10 +26,14 @@ app.prepare().then(() => {
       .then(() => {
         console.log("success");
         res.send("success");
+        let uri = process.env.FRONTEND_URI || "http://localhost:3000";
+        res.redirect(uri + "?send_message=success");
       })
       .catch(error => {
         console.log("failed", error);
         res.send("bad");
+        let uri = process.env.FRONTEND_URI || "http://localhost:3000";
+        res.redirect(uri + "?send_message=failed");
       });
   });
 
