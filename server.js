@@ -25,15 +25,19 @@ app.prepare().then(() => {
     send({ email, name, text: message })
       .then(() => {
         console.log("success");
-        res.send("success");
-        let uri = process.env.FRONTEND_URI || "http://localhost:3000";
-        res.redirect(uri + "?send_message=success");
+        res.json([
+          {
+            statuts: "success"
+          }
+        ]);
       })
       .catch(error => {
         console.log("failed", error);
-        res.send("bad");
-        let uri = process.env.FRONTEND_URI || "http://localhost:3000";
-        res.redirect(uri + "?send_message=failed");
+        res.json([
+          {
+            statuts: "failed"
+          }
+        ]);
       });
   });
 

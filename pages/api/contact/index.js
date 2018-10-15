@@ -4,6 +4,8 @@ import { ValidatorForm } from "react-form-validator-core";
 import Validator from "./Validator";
 import TextareaValidator from "./TextareaValidator";
 
+import fetch from "isomorphic-unfetch";
+
 class Contact extends Component {
   constructor(props) {
     super(props);
@@ -16,7 +18,8 @@ class Contact extends Component {
       name: ""
     };
   }
-
+  
+  
   handleChangeName(event) {
     this.setState({ name: event.target.value });
   }
@@ -41,7 +44,7 @@ class Contact extends Component {
         body: JSON.stringify({ email, message, name })
       }).then(res => {
         res.status === 200 ? this.setState({ submitted: true }) : "";
-      });
+      }).then(() => console.log('submit Form Callback'));
     } else {
       return;
     }
