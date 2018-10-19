@@ -18,26 +18,18 @@ app.prepare().then(() => {
   });
 
   server.post("/api/contact", (req, res) => {
-    console.log(req.body);
+    //console.log(req.body);
 
     const { name, email, message } = req.body;
 
     send({ email, name, text: message })
       .then(() => {
         console.log("success");
-        res.json([
-          {
-            statuts: "success"
-          }
-        ]);
+        res.send({message: 'send successfully'});
       })
       .catch(error => {
         console.log("failed", error);
-        res.json([
-          {
-            statuts: "failed"
-          }
-        ]);
+        res.send({message: 'send failed'});
       });
   });
 

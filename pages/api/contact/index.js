@@ -18,8 +18,13 @@ class Contact extends Component {
       name: ""
     };
   }
-  
-  
+
+  checkStatus() {
+    fetch("/api/contact")
+      .then(res => console.log(res))
+      .catch(e => console.log(e));
+  }
+
   handleChangeName(event) {
     this.setState({ name: event.target.value });
   }
@@ -42,9 +47,11 @@ class Contact extends Component {
           "Content-Type": "application/json"
         },
         body: JSON.stringify({ email, message, name })
-      }).then(res => {
-        res.status === 200 ? this.setState({ submitted: true }) : "";
-      }).then(() => console.log('submit Form Callback'));
+      })
+        .then(res => {
+          res.status === 200 ? this.setState({ submitted: true }) : "";
+        })
+        .then(() => this.checkStatus());
     } else {
       return;
     }
@@ -56,6 +63,7 @@ class Contact extends Component {
   };
 
   render() {
+    console.log(this.props);
     return (
       <div>
         <ValidatorForm
@@ -64,7 +72,7 @@ class Contact extends Component {
           onChange={this.runFormvalidation}
           onSubmit={e => {
             e.preventDefault();
-            this.submitForm();
+            this.submitForm() && this.getInitialProps();
           }}
         >
           <h2>Contact</h2>
@@ -138,9 +146,12 @@ class Contact extends Component {
             )}
           </div>
         </ValidatorForm>
+        <div>{this.props.string}</div>
       </div>
     );
   }
 }
+
+Contact.getInitialProps = async ({ query }) => ({ string: query.string });
 
 export default Contact;
