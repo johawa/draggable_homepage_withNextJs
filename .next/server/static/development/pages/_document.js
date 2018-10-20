@@ -110,7 +110,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_document__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/document */ "next/document");
 /* harmony import */ var next_document__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_document__WEBPACK_IMPORTED_MODULE_2__);
 
-var _jsxFileName = "C:\\Users\\Johannes\\Desktop\\Next_Homepage\\pages\\_document.js";
 
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -155,83 +154,22 @@ function (_Document) {
   _createClass(MyDocument, [{
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("html", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 11
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_document__WEBPACK_IMPORTED_MODULE_2__["Head"], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 12
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("meta", {
-        charSet: "utf-8",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 13
-        },
-        __self: this
+      return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("html", null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_document__WEBPACK_IMPORTED_MODULE_2__["Head"], null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("meta", {
+        charSet: "utf-8"
       }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("meta", {
         name: "viewport",
-        content: "width=device-width, initial-scale=1, shrink-to-fit=no",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 14
-        },
-        __self: this
+        content: "width=device-width, initial-scale=1, shrink-to-fit=no"
       }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("meta", {
         name: "google-site-verification",
-        content: "KWPLUXT2KKaqjtm9WBDpfkCMV58i7VmcFOW2_kPsuuM",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 18
-        },
-        __self: this
+        content: "KWPLUXT2KKaqjtm9WBDpfkCMV58i7VmcFOW2_kPsuuM"
       }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("script", {
         type: "text/javascript",
         async: true,
-        src: "https://www.google-analytics.com/analytics.js",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 22
-        },
-        __self: this
+        src: "https://www.google-analytics.com/analytics.js"
       }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("link", {
         href: "https://fonts.googleapis.com/css?family=Ubuntu:400,500,700",
-        rel: "stylesheet",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 27
-        },
-        __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("title", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 32
-        },
-        __self: this
-      }, "Johannes Walenta")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("body", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 34
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_document__WEBPACK_IMPORTED_MODULE_2__["Main"], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 35
-        },
-        __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_document__WEBPACK_IMPORTED_MODULE_2__["NextScript"], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 36
-        },
-        __self: this
-      })));
+        rel: "stylesheet"
+      }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("title", null, "Johannes Walenta")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("body", null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_document__WEBPACK_IMPORTED_MODULE_2__["Main"], null), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_document__WEBPACK_IMPORTED_MODULE_2__["NextScript"], null)));
     }
   }], [{
     key: "getInitialProps",

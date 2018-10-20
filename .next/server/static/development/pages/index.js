@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -110,8 +110,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _css_App_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_css_App_css__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _hoc_Layout_Layout__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../hoc/Layout/Layout */ "./hoc/Layout/Layout.js");
 /* harmony import */ var _component_IntroAnimation_IntroAnimation__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../component/IntroAnimation/IntroAnimation */ "./component/IntroAnimation/IntroAnimation.js");
-var _jsxFileName = "C:\\Users\\Johannes\\Desktop\\Next_Homepage\\component\\App.js";
-
+/* harmony import */ var react_device_detect__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-device-detect */ "react-device-detect");
+/* harmony import */ var react_device_detect__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_device_detect__WEBPACK_IMPORTED_MODULE_5__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -133,6 +133,7 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 //servers as App like app Component in React
+
 
 
 
@@ -177,25 +178,14 @@ function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_context__WEBPACK_IMPORTED_MODULE_1__["Provider"], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 27
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 28
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_hoc_Layout_Layout__WEBPACK_IMPORTED_MODULE_3__["default"], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 29
-        },
-        __self: this
-      })));
+      if (react_device_detect__WEBPACK_IMPORTED_MODULE_5__["isBrowser"]) {
+        var loaded = this.state.loaded;
+        return loaded ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_context__WEBPACK_IMPORTED_MODULE_1__["Provider"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_hoc_Layout_Layout__WEBPACK_IMPORTED_MODULE_3__["default"], null))) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_component_IntroAnimation_IntroAnimation__WEBPACK_IMPORTED_MODULE_4__["default"], null);
+      }
+
+      if (react_device_detect__WEBPACK_IMPORTED_MODULE_5__["isMobile"]) {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Sry this beauty is only visible on Desktop !");
+      }
     }
   }]);
 
@@ -3036,8 +3026,8 @@ function (_Component) {
         name: "Contact.mail",
         top: 180,
         left: 330,
-        width: 500,
-        height: 330,
+        width: 600,
+        height: 400,
         scale: 1,
         minimized: false,
         visible: false,
@@ -3368,7 +3358,7 @@ module.exports = "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGlu
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/
@@ -3410,6 +3400,17 @@ module.exports = require("file-saver");
 /***/ (function(module, exports) {
 
 module.exports = require("react");
+
+/***/ }),
+
+/***/ "react-device-detect":
+/*!**************************************!*\
+  !*** external "react-device-detect" ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("react-device-detect");
 
 /***/ }),
 

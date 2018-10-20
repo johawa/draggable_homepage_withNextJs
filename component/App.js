@@ -6,6 +6,7 @@ import "../css/App.css";
 
 import Layout from "../hoc/Layout/Layout";
 import IntroAnimation from "../component/IntroAnimation/IntroAnimation";
+import { isBrowser, isMobile } from "react-device-detect";
 
 export default class Wrapper extends Component {
   state = {
@@ -23,13 +24,21 @@ export default class Wrapper extends Component {
   }
 
   render() {
-    return (
-      <Provider>
-        <React.Fragment>
-          <Layout />
-        </React.Fragment>
-      </Provider>
-    );
+    if (isBrowser) {
+      let { loaded } = this.state;
+      return loaded ? (
+        <Provider>
+          <React.Fragment>
+            <Layout />
+          </React.Fragment>
+        </Provider>
+      ) : (
+        <IntroAnimation />
+      );
+    }
+    if (isMobile) {
+      return <div>Sry this beauty is only visible on Desktop !</div>;
+    }
   }
 }
 

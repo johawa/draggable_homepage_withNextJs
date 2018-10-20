@@ -20,8 +20,11 @@ class Contact extends Component {
   }
 
   checkStatus() {
-    fetch("/api/contact")
-      .then(res => console.log(res))
+    fetch("http://localhost:3000/api/contact", {
+      method: 'get'
+    })
+      //.then(res => res.json())
+      .then(json => console.log(json))
       .catch(e => console.log(e));
   }
 

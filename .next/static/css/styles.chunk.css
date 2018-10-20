@@ -331,7 +331,7 @@ ul.app-controls li:hover {
 }
 
 .GridCell {
-    background-color: #6cc3af;
+    background-color: grey;
 }
 
 .GridCell:hover {
