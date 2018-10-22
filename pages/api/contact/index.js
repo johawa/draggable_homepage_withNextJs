@@ -3,7 +3,7 @@ import "isomorphic-fetch";
 import { ValidatorForm } from "react-form-validator-core";
 import Validator from "./Validator";
 import TextareaValidator from "./TextareaValidator";
-
+import contactForm from "../../../css/contactForm.css";
 import fetch from "isomorphic-unfetch";
 
 class Contact extends Component {
@@ -20,8 +20,8 @@ class Contact extends Component {
   }
 
   checkStatus() {
-    fetch("http://localhost:3000/api/contact", {
-      method: 'get'
+    fetch("https://www.johannes-walenta.de/api/contact", {
+      method: "get"
     })
       //.then(res => res.json())
       .then(json => console.log(json))
@@ -59,6 +59,9 @@ class Contact extends Component {
       return;
     }
   }
+  componentDidMount() {
+    this.runFormvalidation();
+  }
   runFormvalidation = () => {
     const result = this.form.walk(this.form.childs);
     this.setState({ FormValid: result });
@@ -79,8 +82,9 @@ class Contact extends Component {
           }}
         >
           <h2>Contact</h2>
-          <div className="f fw grid-row--s">
-            <div className="mb1 pb05">
+          <hr style={{ width: "600px" }} />
+          <div>
+            <div className="ContactBox">
               <label>
                 Name :
                 <Validator
@@ -101,7 +105,7 @@ class Contact extends Component {
                 />
               </label>
             </div>
-            <div className="mb1 pb05">
+            <div className="ContactBox">
               <label>
                 Email :
                 <Validator
@@ -117,7 +121,7 @@ class Contact extends Component {
                 />
               </label>
             </div>
-            <div className="mb1 pb05">
+            <div className="ContactBox">
               <label>
                 Message :
                 <TextareaValidator
@@ -141,10 +145,12 @@ class Contact extends Component {
           </div>
           <div>
             {this.state.FormValid ? (
-              <button type="submit">'Send'</button>
+              <button type="submit" className="SendButton">
+                Send Message
+              </button>
             ) : (
-              <button type="submit" disabled>
-                'Send'
+              <button type="submit" disabled className="SendButton">
+                Send Message
               </button>
             )}
           </div>

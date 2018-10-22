@@ -25,11 +25,11 @@ app.prepare().then(() => {
     send({ email, name, text: message })
       .then(() => {
         console.log("success");
-        res.json({ message: "true" });
+        res.redirect("?send=success");
       })
       .catch(error => {
         console.log("failed", error);
-        res.json({ message: "false" });
+        res.redirect("?send=failed");
       });
   });
 

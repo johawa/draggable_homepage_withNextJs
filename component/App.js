@@ -42,13 +42,3 @@ export default class Wrapper extends Component {
   }
 }
 
-/* let { loaded } = this.state;
-return loaded ? (
-  <Provider>
-    <React.Fragment>
-      <Layout />
-    </React.Fragment>
-  </Provider>
-) : (
-  <IntroAnimation />
-); */

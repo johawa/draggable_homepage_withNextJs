@@ -21,7 +21,7 @@ class TextareaValidator extends ValidatorComponent {
             this.input = r;
           }}
         />
-        {this.errorText()}
+        <div style={{ height: "20px", width: "400px" }}>{this.errorText()}</div>
       </div>
     );
   }
@@ -30,7 +30,7 @@ class TextareaValidator extends ValidatorComponent {
     const { isValid } = this.state;
 
     if (isValid) {
-      return null;
+      return <div style={{ color: "green" }}>&#10004;</div>;;
     }
 
     return <div style={{ color: "red" }}>{this.getErrorMessage()}</div>;
