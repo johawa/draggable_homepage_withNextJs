@@ -17,15 +17,15 @@ const MyWork = props => {
         <br />
         {"I am a Software Developer."}
         <br />
-        {"Currently I am doing a lot of Things with React and Next.js"}
+        {"Currently I am creating my Stuff with React and Next.js"}
         <br />
         {"My Next Project will be a SaaS Product, to rise my Skills"}
         <br />
-        {"and finally deliver useful Stuff :)"}
+        {"and create value ;)"}
         <br />
         <br />
         {
-          "My main Goal is to use the todays techologies' variety to strech the boundries"
+          "My main Goal is, to use the todays techologies' variety to strech the boundries"
         }
         <br />
         {"of the known UX for Webapplications"}
