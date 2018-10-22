@@ -77,7 +77,7 @@ export class Provider extends Component {
         scale: 1,
         minimized: false,
         visible: false,
-        color: "#6cc3af"
+        color: "grey"
       },
       {
         id: 2,

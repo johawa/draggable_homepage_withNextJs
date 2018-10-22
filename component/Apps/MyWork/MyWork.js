@@ -19,9 +19,9 @@ const MyWork = props => {
         <br />
         {"Currently I am creating my Stuff with React and Next.js"}
         <br />
-        {"My Next Project will be a SaaS Product, to rise my Skills"}
+        {"My next Project will be a SaaS Product, to rise my Skills"}
         <br />
-        {"and create value ;)"}
+        {"and hopefully create value ;)"}
         <br />
         <br />
         {
