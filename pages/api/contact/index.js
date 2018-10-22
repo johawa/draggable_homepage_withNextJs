@@ -81,8 +81,9 @@ class Contact extends Component {
             this.submitForm() && this.getInitialProps();
           }}
         >
+          <hr style={{ width: "598px" }} />
           <h2>Contact</h2>
-          <hr style={{ width: "600px" }} />
+          <hr style={{ width: "598px" }} />
           <div>
             <div className="ContactBox">
               <label>
