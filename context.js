@@ -59,13 +59,13 @@ export class Provider extends Component {
         id: 0,
         name: "My Work",
         top: 100,
-        left: 950,
-        width: 400,
-        height: 300,
+        left: 650,
+        width: 600,
+        height: 450,
         scale: 1,
         minimized: false,
         visible: false,
-        color: "#0004FF"
+        color: "#FFF200"
       },
       {
         id: 1,
@@ -93,7 +93,7 @@ export class Provider extends Component {
       },
       {
         id: 3,
-        name: "AboutMe.txt",
+        name: "AboutMe.js",
         top: 295,
         left: 260,
         width: 650,
@@ -101,7 +101,7 @@ export class Provider extends Component {
         scale: 1,
         minimized: false,
         visible: false,
-        color: "#FFF200"
+        color: "#666397"
       },
       {
         id: 4,

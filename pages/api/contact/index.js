@@ -147,11 +147,11 @@ class Contact extends Component {
           <div>
             {this.state.FormValid ? (
               <button type="submit" className="SendButton">
-                Send Message
+                Send a Message
               </button>
             ) : (
               <button type="submit" disabled className="SendButton">
-                Send Message
+                Send a Message
               </button>
             )}
           </div>

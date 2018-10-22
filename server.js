@@ -25,11 +25,11 @@ app.prepare().then(() => {
     send({ email, name, text: message })
       .then(() => {
         console.log("success");
-        res.redirect("https://www.johannes-walenta.de/api/contact?send=success");
+        res.redirect("?send=success");
       })
       .catch(error => {
         console.log("failed", error);
-        res.redirect("https://www.johannes-walenta.de/api/contact?send=failed");
+        res.redirect("?send=failed");
       });
   });
 
