@@ -6,7 +6,6 @@
   "scripts": {
     "dev": "node server.js -p $PORT",
     "build": "next build",
-    "heroku-postbuild": "next build",
     "start": "node server.js -p $PORT"
   },
   "keywords": [],
