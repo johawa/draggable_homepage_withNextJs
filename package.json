@@ -8,6 +8,10 @@
     "build": "next build",
     "start": "node server.js -p $PORT"
   },
+    "engines": {
+    "node": "16.17.0",
+    "npm": "8.15.0"
+  },
   "keywords": [],
   "author": "Johannes Walenta",
   "license": "ISC",
